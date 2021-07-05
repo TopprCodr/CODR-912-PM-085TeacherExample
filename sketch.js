@@ -18,8 +18,8 @@ var render = Render.create({
 element: document.body,
 engine: engine,
 options: {
-    width: 400,
-    height: 400,
+    width: 800,
+    height: 600,
     wireframes : false,
     background: 'rgb(198, 102, 152)'
 }
@@ -33,11 +33,11 @@ Runner.run(runner, engine);
 
 // add bodies
 
-var ground = Bodies.rectangle(200, 390, 400, 20,{label:"ground",isStatic: true}),
-    box = Bodies.rectangle(200, 100, 30, 50,{label:"box"});
+var ground = Bodies.rectangle(400, 590, 800, 20,{label:"ground",isStatic: true}),
+    box = Bodies.rectangle(400, 100, 30, 50,{label:"box"});
 
-var ball = Bodies.circle(200, 30, 20,{label:"ball1",restitution:1});
-var ball2 = Bodies.circle(200, 10, 20,{label:"ball2",restitution:1});
+var ball = Bodies.circle(400, 60, 20,{label:"ball1",restitution:1});
+var ball2 = Bodies.circle(400, 30, 20,{label:"ball2",restitution:1});
 
 Composite.add(world, [ground,box,ball,ball2]);
 
